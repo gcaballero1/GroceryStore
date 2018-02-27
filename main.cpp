@@ -36,6 +36,12 @@ int main()
   }
 }
   while (!(input == 'Q' || input == 'q'));
+  
+  cout<<"==ITEMS TO BUY==\n";
+  for (int j=0; j<5; j++)
+    {
+        cout<<j+1<<" "<<list[j]<<endl;
+    }
 
   return 0;
 }
