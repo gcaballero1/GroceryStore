@@ -1,12 +1,12 @@
 //Author: Gabriel Caballero
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
-  string list[5]; //array of 5 strings
-  int numItems = 0;
+  vector<string> Lata;
   char input;
   string nameItem;
     do
@@ -22,26 +22,23 @@ int main()
   {
   cout<<"What is the item?\n";
   cin>>nameItem;
-
-  if (numItems > 4)
-  {
-  cout<<"You'll need a bigger list!\n";
-  }
-  else
-  {
-  list[numItems]=nameItem;
-  numItems = numItems + 1;
-  }
-  
+  Lata.push_back(nameItem);
   }
 }
   while (!(input == 'Q' || input == 'q'));
   
+  if (Lata.size()>0)
+  {
   cout<<"==ITEMS TO BUY==\n";
   for (int j=0; j<5; j++)
     {
-        cout<<j+1<<" "<<list[j]<<endl;
+        cout<<j+1<<" "<<Lata.at(j)<<endl;
     }
+  }  
+  else
+  {
+  cout<<"No items to buy!\n";
+  }
 
   return 0;
 }
