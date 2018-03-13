@@ -30,7 +30,7 @@ int main()
   if (Lata.size()>0)
   {
   cout<<"==ITEMS TO BUY==\n";
-  for (int j=0; j<5; j++)
+  for (int j=0; j<Lata.size(); j++)
     {
         cout<<j+1<<" "<<Lata.at(j)<<endl;
     }
